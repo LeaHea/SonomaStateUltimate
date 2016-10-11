@@ -1,0 +1,32 @@
+<% include header %>
+<% include navigation %>
+
+<section>
+
+    <% if(rs.length > 0) { %>
+        <table border="1">
+            <tr><th>Tournament</th><th>Location</th><th>Result</tr>
+            <% for (var i=0; rs.length > i; i++) { %>
+                <tr>
+                 <td><a href="/tournament/?tournamentid= <%= rs[i].tournamentid %>"> <%= rs[i].TName %></a></td>
+                 <td><%=rs[i].Location %></a></td>
+                 <td><%=rs[i].Result %></a></td>
+
+                 <td><a href="/tournament/?id= <%=rs[i].tournamentid %>"><keepitdown>more info</keepitdown></a></td>
+                 <td><a href="/tournament/edit?id= <%=rs[i].tournamentid %>"><keepitdown>edit</keepitdown></a></td>
+                 <td><a href="/tournament/delete?id= <%=rs[i].tournamentid %>"><keepitdown>delete</keepitdown></a></td>
+
+                </tr>
+            <% } %>
+        </table>
+    <% } else { %>
+         No players exist on this roster.
+    <% } %>
+
+
+    <div style="margin-top:10px;">
+        <a href="/tournament/add">Add a tournament to the schedule</a>
+    </div>
+    </section>
+
+<% include footer %>

@@ -1,0 +1,9 @@
+<% include header %>
+
+<% if(rs.length > 0) { %>
+    Title: <%= rs[0].Title %> <br />
+<% } else { %>
+    No tournamentID matched this tournamentID <%= tournamentid %>.
+<% } %>
+
+<% include footer %>

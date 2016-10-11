@@ -1,0 +1,35 @@
+<% // create a list of javascript files to have the header load %>
+<% var js_include = ['add_rating.js']; %>
+
+<% include header %>
+
+<!-- Note that this is a post -->
+<form id="add_rating_form" action="<%= action %>">
+  <table id="login">
+
+  <!-- <tr><td>Select a user and a tournament to add rating.</td> -->
+
+      <% include displayUserDropDown %>
+
+      <% include displayTournamentDropDown %>
+
+       Rating: <select id="rating" name="rating">
+            <option value="5">5
+            <option value="4">4
+            <option value="3">3
+            <option value="2">2
+            <option value="1">1
+            </select><br /><br>
+        <!-- </tr> -->
+
+    </table>
+
+    <!-- not that we use a button here and not submit -->
+    <input type="button" id="addRatingBtn" value="Add" />
+</form>
+
+<br>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

@@ -1,0 +1,17 @@
+<% include header %>
+<% include navigation %>
+
+<section>
+<% if(rs.length > 0) { %>
+
+    <h1><%= rs[0].Title %></h1> <br />
+    Name: <%= rs[0].Name %> (<%= rs[0].Nickname %>)<br />
+    USAU Number: <%= rs[0].USAU_Number %> <br />
+
+    Year: <%= rs[0].Year %> <br />
+
+<% } else { %>
+    No boss found with that information <%= usau_number %>.
+<% } %>
+</section>
+<% include footer %>

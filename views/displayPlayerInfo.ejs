@@ -1,0 +1,28 @@
+
+<% include header %>
+<% include navigation %>
+
+
+<section>
+
+    <% if(rs.length > 0) { %>
+    <h1><%= rs[0].Name %> <keepitdown>(<%=rs[0].Nickname%>)</keepitdown></h1><br />
+    USAU Number: <%= rs[0].USAU_number %> <br />
+    Year: <%= rs[0].Year %> <br /> <br /> <br />
+
+    <form action="delete" method="get">
+        <button name="usau_number" type="submit" value=<%=rs[0].USAU_number%>>Remove Player</button>
+    </form>
+
+    <form action="edit" method="get">
+        <button name="usau_number" type="submit" value=<%=rs[0].USAU_number%>>Edit Information</button>
+    </form>
+
+
+
+
+<% } else { %>
+    No user matched this USAU Number <%= usau_number %>.
+<% } %>
+</section>
+<% include footer %>

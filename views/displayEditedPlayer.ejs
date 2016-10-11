@@ -1,0 +1,14 @@
+
+<section>
+<h2>Updated information for <%=rs[0].Name%>:</h2>
+<% if(rs.length > 0) { %>
+
+    USAU Number: <%= rs[0].USAU_number%> <br />
+    Nickname: <%= rs[0].Nickname%> <br />
+    Year: <%= rs[0].Year%> <br />
+
+<% } else { %>
+    No player matched this USAU number.
+<% } %>
+
+    </section>

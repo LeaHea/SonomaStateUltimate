@@ -1,0 +1,31 @@
+<% include header %>
+<% include navigation %>
+
+<section>
+
+    <% if(rs.length > 0) { %>
+        <table border="1">
+            <tr><th>Name</th><th>Title</th>
+            <% for (var i=0; rs.length > i; i++) { %>
+                <tr>
+                 <td><a href="/boss/?bossid= <%= rs[i].USAU_Number %>"> <%= rs[i].Name %></a></td>
+                 <td><%=rs[i].Title %></a></td>
+
+                 <td><a href="/boss/?id= <%=rs[i].bossid %>"><keepitdown>more info</keepitdown></a></td>
+                 <td><a href="/boss/edit?id= <%=rs[i].bossid %>"><keepitdown>edit</keepitdown></a></td>
+                 <td><a href="/boss/delete?id= <%=rs[i].bossid %>"><keepitdown>delete</keepitdown></a></td>
+
+                </tr>
+            <% } %>
+        </table>
+    <% } else { %>
+         No bosses currently active.
+    <% } %>
+
+
+    <div style="margin-top:10px;">
+        <a href="/boss/add">Add a boss</a>
+    </div>
+    </section>
+
+<% include footer %>

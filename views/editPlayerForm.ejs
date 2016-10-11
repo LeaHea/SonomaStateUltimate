@@ -1,0 +1,38 @@
+<% // create a list of javascript files to have the header load %>
+<% var js_include = ['edit_player.js']; %>
+
+<% include header %>
+<% include navigation %>
+<section>
+<h2>Edit Player <keepitdown>(<%= res[0].USAU_number%>)</keepitdown>:</h2>
+
+<!-- Note that this is a post -->
+
+<form id="update_player_form" action="<%= action %>">
+ <table id="login">
+    <input type="hidden" id="usau_number" name="usau_number" value="<%= res[0].USAU_number%>"/>
+            <tr><td>Player Name:</td>
+            <td><input type="text" id="name" name="name" value="<%= res[0].Name%>" /></td></tr>
+            <tr><td>Nickname:</td>
+            <td><input type="text" id="nickname" name="nickname" value="<%= res[0].Nickname%>"  /></td> </tr>
+            <tr><td>Year:</td>
+             <td><select id="year" name="year">
+                    <option value="Freshman">Freshman
+                    <option value="Sophomore">Sophomore
+                    <option value="Junior">Junior
+                    <option value="Senior">Senior
+
+                </select><br />
+
+                </td>
+           </tr>
+</table>
+    <br>
+    <!-- not that we use a button here and not submit -->
+    <input type="button" id="updatePlayerBtn" value="Update Player" />
+</form>
+
+</section>
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

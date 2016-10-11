@@ -1,0 +1,22 @@
+<% include header %>
+
+    <div>
+    <% if(rs.length > 0) { %>
+        <table border="1">
+            <tr><th>Title</th></tr>
+            <% for (var i=0; rs.length > i; i++) { %>
+                <tr>
+                 <td><a href="/tournament/?tournamentid=<%= rs[i].TournamentID %>"> <%= rs[i].Title %></a></td>
+                </tr>
+            <% } %>
+        </table>
+    <% } else { %>
+         No tournaments are entered into the Tournament database table.
+    <% } %>
+    </div>
+
+    <div style="margin-top:10px;">
+        <a href="/tournament/add">Add Tournament</a>
+    </div>
+
+<% include footer %>

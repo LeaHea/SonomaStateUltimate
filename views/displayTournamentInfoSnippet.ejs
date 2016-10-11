@@ -1,0 +1,13 @@
+
+<sectionwithsnippet>
+<h2>Tournament Added</h2>
+<% if(rs.length > 0) { %>
+    Tournament: <%= rs[0].TName%> <br />
+    Location: <%= rs[0].Location%> <br />
+    Date: <%= rs[0].Semester%> <%=rs[0].Year%><br />
+    Result: <%= rs[0].Result%> <br />
+
+<% } else { %>
+    No tournament matched this tournament id <%= tournamentid %>.
+<% } %>
+</sectionwithsnippet>

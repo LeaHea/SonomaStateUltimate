@@ -1,0 +1,27 @@
+<% // create a list of javascript files to have the header load %>
+<% var js_include = ['add_boss.js']; %>
+<% include header %>
+<% include navigation %>
+
+<section>
+<h2>Assign title to player:</h2>
+
+<!-- Note that this is a post -->
+<form id="add_boss_form" action="<%= action %>">
+    <table id="login">
+
+    <% include displayPlayerDropDown %>
+
+    <tr><td>Title: </td>
+    <td><input type="text" id="title" name="title" /></td> </tr>
+
+    </table>
+    <!-- not that we use a button here and not submit -->
+    <input type="button" id="addBossBtn" value="Add" />
+</form>
+
+</section>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

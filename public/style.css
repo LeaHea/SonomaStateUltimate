@@ -1,0 +1,57 @@
+table.login {
+    border:none;
+}
+
+footer {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top:100px;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+
+section {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width:600px;
+    float:left;
+    padding:10px;
+
+}
+
+sectionwithsnippet{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width:600px;
+    height:300px;
+    float:left;
+    padding:20px;
+}
+
+header {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color:black;
+    color:white;
+    text-align:right;
+    padding:10px;
+    font-size:200%;
+    margin-bottom:5px;
+}
+
+
+nav {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    line-height:20px;
+    text-align:left;
+    background-color:#eeeeee;
+    height:600px;
+    width:125px;
+    float:left;
+    padding:10px;
+    margin-bottom:5px;
+}
+
+keepitdown {
+    font-size:60%;
+}
+

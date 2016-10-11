@@ -1,0 +1,26 @@
+<% include header %>
+<% include navigation %>
+
+<section>
+
+    <% if(rs.length > 0) { %>
+        <table border="1">
+            <tr><th>Name</th><th>USAU_number</tr>
+            <% for (var i=0; rs.length > i; i++) { %>
+                <tr>
+                 <td><a href="/player/?playerid=<%= rs[i].USAU_number %>"> <%= rs[i].Name %></a></td>
+                 <td><%=rs[i].USAU_number %></a></td>
+                </tr>
+            <% } %>
+        </table>
+    <% } else { %>
+         No players exist on this roster.
+    <% } %>
+
+
+    <div style="margin-top:10px;">
+        <a href="/player/create">Add new player to Roster</a>
+    </div>
+    </section>
+
+<% include footer %>

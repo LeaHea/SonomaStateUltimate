@@ -1,0 +1,23 @@
+<% var js_include = ['select_user_ajax.js']; %>
+
+
+
+<% if(rs1.length > 0) { %>
+
+<form id="user_form" method="get" action="/user">
+    <label for="userid">User: </label>
+    <select id="userid" name="userid">
+        <option value=""><!-- intentionally left blank --></option>
+        <% for (var i=0; rs1.length > i; i++) { %>
+        <option value="<%= rs1[i].UserID %>">
+            <%= rs1[i].Username %>
+        </option>
+        <% } %>
+    </select>
+</form>
+<% } else { %>
+The table does not contain any records.
+<% } %>
+<br />
+<div id="output" style="display:none;"></div>
+

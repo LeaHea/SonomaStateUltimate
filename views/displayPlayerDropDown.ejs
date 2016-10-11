@@ -1,0 +1,23 @@
+<% var js_include = ['select_player_ajax.js']; %>
+
+
+
+<% if(rs1.length > 0) { %>
+
+<form id="player_form" method="get" action="/player">
+    <label for="usau_number"><td>Player: </td></label>
+  <td> <select id="usau_number" name="usau_number">
+        <option value=""><!-- intentionally left blank --></option>
+        <% for (var i=0; rs1.length > i; i++) { %>
+        <option value="<%= rs1[i].USAU_number %>">
+            <%= rs1[i].Name %>
+        </option>
+        <% } %>
+    </select>
+</form> </td>
+<% } else { %>
+The table does not contain any records.
+<% } %>
+<br />
+
+

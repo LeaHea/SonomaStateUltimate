@@ -1,0 +1,13 @@
+<% include header %>
+<% include navigation %>
+
+<section>
+<% if(rs.length > 0) { %>
+      <%= rs[0].Name %> was successfully removed from roster.<br />
+      <% } else { %>
+          No player was found with that information <%= usau_number %>.
+      <% } %>
+
+</section>
+
+<% include footer %>

@@ -1,0 +1,11 @@
+<section>
+
+<h2>The following Boss has been added:</h2>
+<% if(rs.length > 0) { %>
+    USAU Number: <%= rs[0].USAU_Number%> <br />
+    Title: <%= rs[0].Title%> <br />
+<% } else { %>
+    No Boss matched that description.
+<% } %>
+
+</section>

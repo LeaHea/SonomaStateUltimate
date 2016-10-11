@@ -1,0 +1,14 @@
+
+<section>
+<h2>The following player has been added to the roster:</h2>
+<% if(rs.length > 0) { %>
+    Name: <%= rs[0].Name%> <br />
+    USAU Number: <%= rs[0].USAU_number%> <br />
+    Nickname: <%= rs[0].Nickname%> <br />
+    Year: <%= rs[0].Year%> <br />
+
+<% } else { %>
+    No player matched this USAU number.
+<% } %>
+
+    </section>

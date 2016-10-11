@@ -1,0 +1,9 @@
+<h2>Rating Inserted</h2>
+<% if(rs2.length > 0) { %>
+    UserID: <%= rs2[0].UserID%> <br />
+    TournamentID: <%= rs2[0].MID%> <br />
+    Rating: <%= rs2[0].Rating%> <br />
+
+<% } else { %>
+    No user matched this user id <%= userid %>.
+<% } %>
